@@ -14,8 +14,6 @@ from PySide6.QtWidgets import (
 
 INCH_TO_METER = 0.0254
 
-
-
 class ConverterWindow(QMainWindow):
     """Main window for the measurement converter."""
 
@@ -25,9 +23,9 @@ class ConverterWindow(QMainWindow):
         self.setWindowTitle("Measurement Converter")
         self.resize(850, 450)
 
-        self._build_ui()          # Create UI elements
-        self._connect_signals()  # Connect buttons to functions
-        self._reset_form()       # Set default state
+        self._build_ui()
+        self._connect_signals()
+        self._reset_form()
 
     def _build_ui(self):
         """Build and arrange all widgets."""
@@ -38,17 +36,17 @@ class ConverterWindow(QMainWindow):
         main_layout = QGridLayout()
         central_widget.setLayout(main_layout)
 
-        # ----- Title -----
+        #Title
         self.lblTitle = QLabel("Converter App")
         self.lblTitle.setFont(QFont("Arial", 18, QFont.Bold))
         self.lblTitle.setAlignment(Qt.AlignCenter)
 
-        # ----- Input -----
+        # Input
         self.lblPrompt = QLabel("Enter a value and choose conversion")
         self.txtInput = QLineEdit()
         self.txtInput.setPlaceholderText("Example: 10 or 5.5")
 
-        # ----- Radio Buttons -----
+        # Radio Buttons
         self.grpConversion = QGroupBox("Convert Measurement")
 
         self.rbInToM = QRadioButton("Inches to Meters")
@@ -59,16 +57,16 @@ class ConverterWindow(QMainWindow):
         radio_layout.addWidget(self.rbMToIn)
         self.grpConversion.setLayout(radio_layout)
 
-        # ----- Result Display -----
+        # Result Display
         self.lblResult = QLabel("")
         self.lblResult.setAlignment(Qt.AlignCenter)
 
-        # ----- Buttons -----
+        # Buttons
         self.btnConvert = QPushButton("Convert")
         self.btnClear = QPushButton("Clear")
         self.btnExit = QPushButton("Exit")
 
-        # ----- Image Section -----
+        # Image Section
         self.imgFrame = QFrame()
         self.imgLabel = QLabel()
         self.imgLabel.setAlignment(Qt.AlignCenter)
@@ -78,7 +76,7 @@ class ConverterWindow(QMainWindow):
 
         self._load_house_image()  # Load image into label
 
-        # ----- Layout Assembly -----
+        #Layout Assembly
         left_layout = QVBoxLayout()
         left_layout.addWidget(self.lblTitle)
         left_layout.addWidget(self.lblPrompt)
@@ -125,7 +123,7 @@ class ConverterWindow(QMainWindow):
                 pixmap = QPixmap(path)
                 break
 
-        # Display image or fallback text
+        # Display image
         if not pixmap.isNull():
             self.imgLabel.setPixmap(
                 pixmap.scaled(260, 260, Qt.KeepAspectRatio, Qt.SmoothTransformation)
@@ -143,7 +141,7 @@ class ConverterWindow(QMainWindow):
         """Reset input, result, and default selection."""
         self.txtInput.clear()
         self.lblResult.clear()
-        self.rbInToM.setChecked(True)  # Default selection
+        self.rbInToM.setChecked(True)
         self.txtInput.setFocus()
 
     def inches_to_meters(self, inches):
