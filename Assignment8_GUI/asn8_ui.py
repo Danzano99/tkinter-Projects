@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
     QMenuBar, QPushButton, QSizePolicy, QStatusBar,
     QVBoxLayout, QWidget)
 
+
 class Ui_root(object):
     def setupUi(self, root):
         if not root.objectName():
