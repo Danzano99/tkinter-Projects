@@ -1,0 +1,90 @@
+# Assignment 7 – Measurement Converter GUI
+
+## Student Information
+
+* **Name:** Dominic Anzano
+* **Course:** Graph User Interface Dev
+* **Assignment:** Assignment 7 Project (Python/Qt): Measurement Converter GUI
+
+---
+
+## Project Description
+
+This project is a GUI-based measurement converter built using Python and PySide6. The application allows users to input a number and convert between inches and meters using an interface.
+
+---
+
+## Features
+
+* Input field for numeric values
+* Radio button selection for:
+  * Inches to Meters
+  * Meters to Inches
+* Convert, Clear, and Exit buttons
+* Result display rounded to three decimal places
+* Error handling using message boxes
+* Display of provided house image
+* Accessible and readable UI design
+
+---
+
+## Technologies Used
+
+* Python
+* PySide6 (Qt for Python)
+* PyCharm (or your chosen IDE)
+
+---
+
+## How to Run the Program
+
+1. Ensure Python 3 and PySide6 are installed
+
+   ```bash
+   pip install PySide6
+   ```
+
+2. Make sure the project structure is correct:
+
+   ```
+   project_folder/
+   ├── asn7.py
+   ├── house.png   (or inside /assets folder)
+   ```
+
+3. Run the program:
+
+   ```bash
+   python asn7.py
+   ```
+
+---
+
+## Input Testing
+
+The following test cases were used to validate functionality:
+
+* Empty input > shows error message
+* Non-numeric input ("ABC") > shows error message
+* Negative input (-5) > shows error message
+* Decimal input (5.5) > converts correctly(Rounded to .100th)
+* Integer input (10) > converts correctly
+
+Both conversion directions (Inches ↔ Meters) were tested.
+
+---
+
+## Issues Encountered
+
+* None
+
+---
+
+## Attributions
+
+* PySide6 Documentation: https://doc.qt.io/qtforpython/
+* Class lecture materials and assignment instructions
+
+* No external code was directly copied.
+
+---
