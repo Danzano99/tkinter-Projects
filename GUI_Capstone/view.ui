@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>368</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Temperature Converter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMainWindow {
+    background-color: #dfe7ee;
+}
+
+QWidget {
+    background-color: #dfe7ee;
+    color: #2f3b46;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+}
+
+QFrame#converterFrame {
+    background-color: #eef4f8;
+    border: 1px solid #b7c7d6;
+    border-radius: 14px;
+}
+
+QLabel#titleLabel {
+    color: #2e4a5f;
+    font-size: 16pt;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+}
+
+QLabel#descriptionLabel {
+    color: #5f7282;
+    font-size: 9pt;
+    border: none;
+    background: transparent;
+}
+
+QLabel#inputLabel {
+    color: #3a4b57;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+}
+
+QLabel#resultLabel {
+    color: #4f8a78;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+}
+
+QLineEdit#fahrenheitInput {
+    background-color: #f8fbfd;
+    color: #2f3b46;
+    border: 1px solid #b7c7d6;
+    border-radius: 8px;
+    padding: 7px;
+}
+
+QLineEdit#fahrenheitInput:focus {
+    border: 1px solid #6d97b8;
+}
+
+QPushButton#convertButton {
+    background-color: #6d97b8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+QPushButton#convertButton:hover {
+    background-color: #7da5c4;
+}
+
+QPushButton#convertButton:pressed {
+    background-color: #5d88a9;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="converterFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>230</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>260</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>24</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="titleLabel">
+           <property name="text">
+            <string>Temperature Converter</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="inputLabel">
+           <property name="text">
+            <string>Enter Farenheit:</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLineEdit" name="fahrenheitInput">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Example: 72</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QLabel" name="resultLabel">
+           <property name="text">
+            <string>Result will appear here</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="convertButton">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>34</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Convert to Celsius</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>368</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
