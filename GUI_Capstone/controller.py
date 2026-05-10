@@ -2,7 +2,6 @@ from model import TemperatureModel
 from view import Ui_MainWindow
 from PySide6.QtWidgets import QMainWindow
 
-
 class TemperatureController(QMainWindow):
     def __init__(self):
         super().__init__()
