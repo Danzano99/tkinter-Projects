@@ -173,7 +173,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Temperature Converter", None))
         self.titleLabel.setText(QCoreApplication.translate("MainWindow", u"Temperature Converter", None))
-        self.inputLabel.setText(QCoreApplication.translate("MainWindow", u"Enter Farenheit:", None))
+        self.inputLabel.setText(QCoreApplication.translate("MainWindow", u"Enter Fahrenheit:", None))
         self.fahrenheitInput.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Example: 72", None))
         self.resultLabel.setText(QCoreApplication.translate("MainWindow", u"Result will appear here", None))
         self.convertButton.setText(QCoreApplication.translate("MainWindow", u"Convert to Celsius", None))

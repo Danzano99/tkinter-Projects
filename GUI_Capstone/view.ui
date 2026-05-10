@@ -151,7 +151,7 @@ QPushButton#convertButton:pressed {
          <item alignment="Qt::AlignmentFlag::AlignHCenter">
           <widget class="QLabel" name="inputLabel">
            <property name="text">
-            <string>Enter Farenheit:</string>
+            <string>Enter Fahrenheit:</string>
            </property>
           </widget>
          </item>
